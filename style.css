@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+
+.v-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center !important
+    
+}
+
+.fullscreen-video-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background: #702222;
+    z-index: 1;
+    opacity: 0.5;
+    left: 0;
+}
+
+.header-content {
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+.header-content .container {
+    max-width: 400px !important;
+    background-color: #e3e3e35e;
+    border-radius: 10px;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.header-content p{
+  font-size:1.5rem;
+  display:block;
+  padding-bottom:2rem;
+}
+
+
+.form-signin {
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+    display: inline-grid;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.form-signin small {
+    font-size: 8pt !important;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 2px solid #ff0 !important;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: 2px solid #ff0 !important;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+}
+
+
+button {
+    text-transform: uppercase;
+}
+
+.login-btn {
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 90px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-btn:after {
+    margin-bottom: 10px !important;
+}
+
+
+.glemt-btn {
+    padding: 10px 0;
+    margin: auto;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d4d4d48f;
+    color: #515151d4;
+}
+
+
+
