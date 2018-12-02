@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Background RiksTV</title>
     <link href="style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,7 +15,7 @@
     <header class="v-header container">
         <div class="fullscreen-video-wrap">
             <video id="bgvid" autoplay controls playsinline loop type="video/mp4" muted>
-                <source src="globe.mp4">
+                <source src="thor.mp4"><!--Here you can change the video between Thor.mp4 and globe.mp4-->
             </video>
         </div>
         <div class="header-overlay"></div>
@@ -23,22 +25,97 @@
                 <path fill="#000000" d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z" />
             </svg>
             </button>
+            
             <div class="centercontent container">
-                <h2>Logg inn</h2>
-                <div ng-class="margin20">
-                    <span class="txt style-normal size-tiny">Bruk samme innloggingsdetaljer som du bruker på Hotmail</span>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active login-btn btn btn-primary" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glemt-btn btn btn-success" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">New User?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn btn btn-secondary" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <h2>Log in</h2>
+                        <div ng-class="margin20">
+                            <span class="txt style-normal size-tiny">Use the same login details that you use on Hotmail.</span>
+                        </div>
+                        <form class="form-signin">
+                            <label for="inputEmail" class="sr-only">Username*</label>
+                            <input type="email" id="inputEmail" class="form-control" required="" autofocus="">
+                            <small>Phone number, customer number or email</small>
+                            <br>
+                            <label for="inputPassword" class="sr-only">Password*</label>
+                            <input type="password" id="inputPassword" class="form-control" required="">
+                            <div class="form-check mb-2 mr-sm-2">
+                                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                <label class="form-check-label" for="inlineFormCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary login-btn " type="submit">log in</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-warning glemt-btn" type="submit">reset password</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h2>Registration</h2>
+                        <form class="form-signin">
+                            <!--First Name-->
+                            <label for="inputFirstName" class="sr-only">First Name*</label>
+                            <input type="firstName" id="inputFirstName" class="form-control" required="" placeholder="First Name*" autofocus="">
+                            <!--Last Name-->
+                            <label for="inputLastName" class="sr-only">Last Name*</label>
+                            <input type="lastName" id="inputLastName" class="form-control" required="" placeholder="Last Name*" autofocus="">
+                            <!--Email-->
+                            <label for="inputEmail" class="sr-only">Email*</label>
+                            <input type="email" id="inputEmail" class="form-control" required="" placeholder="Email*" autofocus="">
+                            <!--Username-->
+                            <label for="inputUser" class="sr-only">Username*</label>
+                            <input type="username" id="inputUser" class="form-control" required="" placeholder="Username*" autofocus="">
+                            <!--Password-->
+                            <label for="inputPassword" class="sr-only">Password*</label>
+                            <input type="password" id="inputPassword" class="form-control" required="" placeholder="Password*">
+                            <!--Repeat Password-->
+                            <label for="inputPassword" class="sr-only">Repeat Password*</label>
+                            <input type="password" id="inputPassword" class="form-control" required="" placeholder="Repeat Password*">
+                            <button class="btn btn-primary login-btn " type="submit">Register</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <form class="form-signin">
+                            <!--First Name-->
+                            <label for="inputFirstName" class="sr-only">First Name*</label>
+                            <input type="firstName" id="inputFirstName" class="form-control" required="" placeholder="First Name*" autofocus="">
+                            <!--Last Name-->
+                            <label for="inputLastName" class="sr-only">Last Name*</label>
+                            <input type="lastName" id="inputLastName" class="form-control" required="" placeholder="Last Name*" autofocus="">
+                            <!--Email-->
+                            <label for="inputEmail" class="sr-only">Email*</label>
+                            <input type="email" id="inputEmail" class="form-control" required="" placeholder="Email*" autofocus="">
+                            <!--Subject-->
+                            <label for="inputSubject" class="sr-only">Subject</label>
+                            <input type="subject" id="inputSubject" class="form-control" required="" placeholder="Subject" autofocus="">
+                            <!--Textarea-->
+                            <label for="inputTextarea" class="sr-only">Textarea</label>
+                            <textarea type="textarea" id="inputTextarea" class="form-control" placeholder="Leave a message" autofocus="">
+                            </textarea>   
+                            <button class="btn btn-primary login-btn " type="submit">Send</button>
+                        </form>
+                    </div>
                 </div>
-                <form class="form-signin">
-                    <label for="inputEmail" class="sr-only">Brukernavn*</label>
-                    <input type="email" id="inputEmail" class="form-control" required="" autofocus="">
-                    <small>Telefonnummer, kundenummer eller epost</small>
-                    <br>
-                    <label for="inputPassword" class="sr-only">Passord*</label>
-                    <input type="password" id="inputPassword" class="form-control" required="">
-                    <button class="login-btn" type="submit">logg inn</button>
-                    <button class="glemt-btn" type="submit">Glemt Passord?</button>
-                </form>
             </div>
+            
+                
         </div>
     </header>
       
@@ -57,6 +134,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
 </body>
 </html>
